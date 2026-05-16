@@ -1,0 +1,575 @@
+[
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "wtforms.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "CKEditorField",
+        "importPath": "flask_ckeditor",
+        "description": "flask_ckeditor",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor",
+        "documentation": {}
+    },
+    {
+        "label": "CKEditor",
+        "importPath": "flask_ckeditor",
+        "description": "flask_ckeditor",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Bootstrap5",
+        "importPath": "flask_bootstrap",
+        "description": "flask_bootstrap",
+        "isExtraImport": true,
+        "detail": "flask_bootstrap",
+        "documentation": {}
+    },
+    {
+        "label": "cleanify",
+        "importPath": "flask_ckeditor.utils",
+        "description": "flask_ckeditor.utils",
+        "isExtraImport": true,
+        "detail": "flask_ckeditor.utils",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CreatePostForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "CommentForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "CreatePostForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class CreatePostForm(FlaskForm):\n    title = StringField(\"Blog Post Title\", validators=[DataRequired()])\n    subtitle = StringField(\"Subtitle\", validators=[DataRequired()])\n    img_url = StringField(\"Blog Image URL\", validators=[DataRequired(), URL()])\n    body = CKEditorField(\"Blog Content\", validators=[DataRequired()])\n    submit = SubmitField(\"Submit Post\")\nclass RegisterForm(FlaskForm):\n    email = StringField('Email', validators=[DataRequired(), Email(message=\"Please enter a valid email address\")])\n    password = StringField('Password', validators=[DataRequired(), length(min=8, max=64, message=\"Password must be 8 or more characters long\")])\n    name = StringField('Username', validators=[DataRequired()])",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class RegisterForm(FlaskForm):\n    email = StringField('Email', validators=[DataRequired(), Email(message=\"Please enter a valid email address\")])\n    password = StringField('Password', validators=[DataRequired(), length(min=8, max=64, message=\"Password must be 8 or more characters long\")])\n    name = StringField('Username', validators=[DataRequired()])\n    submit = SubmitField('SIGN ME UP!')\nclass LoginForm(FlaskForm):\n    email = StringField('Email', validators=[DataRequired(), Email(message=\"Please enter a valid email address\")])\n    password = StringField('Password', validators=[DataRequired()])\n    submit = SubmitField('LOG ME IN!')\nclass CommentForm(FlaskForm):",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('Email', validators=[DataRequired(), Email(message=\"Please enter a valid email address\")])\n    password = StringField('Password', validators=[DataRequired()])\n    submit = SubmitField('LOG ME IN!')\nclass CommentForm(FlaskForm):\n    comment_text = CKEditorField(\"Comment\", validators=[DataRequired()])\n    submit = SubmitField(\"SUBMIT COMMENT\")",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "CommentForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class CommentForm(FlaskForm):\n    comment_text = CKEditorField(\"Comment\", validators=[DataRequired()])\n    submit = SubmitField(\"SUBMIT COMMENT\")",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Base(DeclarativeBase):\n    pass\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\nclass BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BlogPost",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    img_url: Mapped[str] = mapped_column(String(250), nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"))\n    author: Mapped[\"User\"] = relationship( back_populates=\"posts\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = \"users\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    email: Mapped[str] = mapped_column(String(100), unique=True)\n    password: Mapped[str] = mapped_column(String(512))\n    username: Mapped[str] = mapped_column(String(50))\n    posts: Mapped[list[\"BlogPost\"]] = relationship(back_populates=\"author\")\n    comments: Mapped[list[\"Comment\"]] = relationship(back_populates=\"author\")\nclass Comment(db.Model):\n    __tablename__ = \"comments\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Comment(db.Model):\n    __tablename__ = \"comments\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    text: Mapped[str] = mapped_column(Text, nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"))\n    author: Mapped[\"User\"] = relationship( back_populates=\"comments\")\n    post_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"blog_posts.id\"))\n    post: Mapped[\"BlogPost\"] = relationship(back_populates=\"comments\")\nwith app.app_context():\n    db.create_all()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if current_user.id != id:\n                return abort(403)\n            return func(*args, **kwargs)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "admin_required",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if current_user.id != id:\n                return abort(403)\n            return func(*args, **kwargs)\n        return decorated_function\n    return decorator",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def register():\n    form = RegisterForm()\n    if form.validate_on_submit():\n        email = form.email.data\n        password = form.password.data\n        name = form.name.data\n        if User.query.filter_by(email=email).first():\n            flash(\"User already exists. Please log in instead.\")\n            return redirect(url_for(\"login\"))\n        hashed_password = generate_password_hash(password, method='scrypt:32768:8:1', salt_length=8) #type: ignore",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def login():\n    form = LoginForm()\n    if form.validate_on_submit():\n        email = form.email.data\n        password = form.password.data\n        user = db.session.execute(db.select(User).where(User.email == email)).scalar_one_or_none()\n        if user is None:\n            flash(\"This user does not exist\")\n            return redirect(url_for(\"login\"))\n        if check_password_hash(user.password, password):    #type: ignore",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for('get_all_posts'))\n@app.route('/')\ndef get_all_posts():\n    result = db.session.execute(db.select(BlogPost))\n    posts = result.scalars().all()\n    return render_template(\"index.html\", all_posts=posts)\n@app.route(\"/post/<int:post_id>\", methods=[\"GET\", \"POST\"])\ndef show_post(post_id):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_posts",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_all_posts():\n    result = db.session.execute(db.select(BlogPost))\n    posts = result.scalars().all()\n    return render_template(\"index.html\", all_posts=posts)\n@app.route(\"/post/<int:post_id>\", methods=[\"GET\", \"POST\"])\ndef show_post(post_id):\n    requested_post = db.get_or_404(BlogPost, post_id)\n    form = CommentForm()\n    if form.validate_on_submit():\n        if not current_user.is_authenticated:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "show_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def show_post(post_id):\n    requested_post = db.get_or_404(BlogPost, post_id)\n    form = CommentForm()\n    if form.validate_on_submit():\n        if not current_user.is_authenticated:\n            flash(\"You need to login or register to comment.\")\n            return redirect(url_for(\"login\"))\n        new_comment = Comment(\n            text= cleanify(form.comment_text.data), #type: ignore\n            author = current_user, #type: ignore",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "add_new_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def add_new_post():\n    form = CreatePostForm()\n    if form.validate_on_submit():\n        new_post = BlogPost(\n            title=form.title.data,  #type: ignore\n            subtitle=form.subtitle.data,    #type: ignore\n            body=form.body.data,    #type: ignore\n            img_url=form.img_url.data,  #type: ignore\n            author=current_user, #type: ignore\n            date=date.today().strftime(\"%B %d, %Y\") #type: ignore",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "edit_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def edit_post(post_id):\n    post = db.get_or_404(BlogPost, post_id)\n    edit_form = CreatePostForm(\n        title=post.title,\n        subtitle=post.subtitle,\n        img_url=post.img_url,\n        author=post.author,\n        body=post.body\n    )\n    if edit_form.validate_on_submit():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "delete_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def delete_post(post_id):\n    post_to_delete = db.get_or_404(BlogPost, post_id)\n    db.session.delete(post_to_delete)\n    db.session.commit()\n    return redirect(url_for('get_all_posts'))\n@app.route(\"/about\")\ndef about():\n    return render_template(\"about.html\")\n@app.route(\"/contact\")\ndef contact():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def about():\n    return render_template(\"about.html\")\n@app.route(\"/contact\")\ndef contact():\n    return render_template(\"contact.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True, port=5002)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "contact",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def contact():\n    return render_template(\"contact.html\")\nif __name__ == \"__main__\":\n    app.run(debug=True, port=5002)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\nSECRET_KEY = os.urandom(32)\napp.config['SECRET_KEY'] = SECRET_KEY\napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nCKEditor(app)\nBootstrap5(app)\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SECRET_KEY = os.urandom(32)\napp.config['SECRET_KEY'] = SECRET_KEY\napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nCKEditor(app)\nBootstrap5(app)\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    return db.session.get(User, int(user_id))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['SECRET_KEY'] = SECRET_KEY\napp.config['CKEDITOR_PKG_TYPE'] = 'standard'\nCKEditor(app)\nBootstrap5(app)\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['CKEDITOR_PKG_TYPE']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['CKEDITOR_PKG_TYPE'] = 'standard'\nCKEditor(app)\nBootstrap5(app)\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():\n    id = 1",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'\ndb = SQLAlchemy(model_class=Base)\ndb.init_app(app)\nclass BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "db = SQLAlchemy(model_class=Base)\ndb.init_app(app)\nclass BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    img_url: Mapped[str] = mapped_column(String(250), nullable=False)",
+        "detail": "main",
+        "documentation": {}
+    }
+]

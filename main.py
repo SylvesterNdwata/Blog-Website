@@ -3,7 +3,6 @@ from flask import Flask, abort, render_template, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
 from flask_ckeditor.utils import cleanify
-# from flask_gravatar import Gravatar
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
@@ -12,7 +11,7 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from forms import CreatePostForm, LoginForm, RegisterForm, CommentForm
-import wtforms.validators
+from typing import cast
 
 app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
@@ -33,6 +32,9 @@ def admin_required():
     def decorator(func):
         @wraps(func)
         def decorated_function(*args, **kwargs):
+            if not current_user.is_authenticated:
+                return abort(401)
+            
             if current_user.id != id:
                 return abort(403)
             return func(*args, **kwargs)
@@ -55,7 +57,7 @@ class BlogPost(db.Model):
     date: Mapped[str] = mapped_column(String(250), nullable=False)
     body: Mapped[str] = mapped_column(Text, nullable=False)
     img_url: Mapped[str] = mapped_column(String(250), nullable=False)
-    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"))
+    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), nullable=False)
     author: Mapped["User"] = relationship( back_populates="posts")
     comments: Mapped[list["Comment"]] = relationship(back_populates="post")
 
@@ -63,9 +65,9 @@ class BlogPost(db.Model):
 class User(UserMixin, db.Model):
     __tablename__ = "users"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(100), unique=True)
-    password: Mapped[str] = mapped_column(String(512))
-    username: Mapped[str] = mapped_column(String(50))
+    email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(String(512), nullable=False)
+    username: Mapped[str] = mapped_column(String(50), nullable=False)
     posts: Mapped[list["BlogPost"]] = relationship(back_populates="author")
     comments: Mapped[list["Comment"]] = relationship(back_populates="author")
     
@@ -74,9 +76,9 @@ class Comment(db.Model):
     __tablename__ = "comments"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     text: Mapped[str] = mapped_column(Text, nullable=False)
-    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"))
+    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"), nullable=False)
     author: Mapped["User"] = relationship( back_populates="comments")
-    post_id: Mapped[int] = mapped_column(Integer, ForeignKey("blog_posts.id"))
+    post_id: Mapped[int] = mapped_column(Integer, ForeignKey("blog_posts.id"), nullable=False)
     post: Mapped["BlogPost"] = relationship(back_populates="comments")
 
 with app.app_context():
@@ -198,11 +200,11 @@ def edit_post(post_id):
         body=post.body
     )
     if edit_form.validate_on_submit():
-        post.title = edit_form.title.data
-        post.subtitle = edit_form.subtitle.data
-        post.img_url = edit_form.img_url.data
-        post.author = current_user
-        post.body = edit_form.body.data
+        post.title = edit_form.title.data   #type: ignore
+        post.subtitle = edit_form.subtitle.data #type: ignore
+        post.img_url = edit_form.img_url.data   #type: ignore
+        post.author = current_user   #type: ignore
+        post.body = edit_form.body.data  #type: ignore
         db.session.commit()
         return redirect(url_for("show_post", post_id=post.id))
     return render_template("make-post.html", form=edit_form, is_edit=True)

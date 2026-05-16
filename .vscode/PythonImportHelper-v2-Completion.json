@@ -24,15 +24,6 @@
         "documentation": {}
     },
     {
-        "label": "wtforms.validators",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "wtforms.validators",
-        "description": "wtforms.validators",
-        "detail": "wtforms.validators",
-        "documentation": {}
-    },
-    {
         "label": "DataRequired",
         "importPath": "wtforms.validators",
         "description": "wtforms.validators",
@@ -330,6 +321,14 @@
         "documentation": {}
     },
     {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "CreatePostForm",
         "kind": 6,
         "importPath": "forms",
@@ -379,7 +378,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    img_url: Mapped[str] = mapped_column(String(250), nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"))\n    author: Mapped[\"User\"] = relationship( back_populates=\"posts\")",
+        "peekOfCode": "class BlogPost(db.Model):\n    __tablename__ = \"blog_posts\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)\n    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)\n    date: Mapped[str] = mapped_column(String(250), nullable=False)\n    body: Mapped[str] = mapped_column(Text, nullable=False)\n    img_url: Mapped[str] = mapped_column(String(250), nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"), nullable=False)\n    author: Mapped[\"User\"] = relationship( back_populates=\"posts\")",
         "detail": "main",
         "documentation": {}
     },
@@ -388,7 +387,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = \"users\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    email: Mapped[str] = mapped_column(String(100), unique=True)\n    password: Mapped[str] = mapped_column(String(512))\n    username: Mapped[str] = mapped_column(String(50))\n    posts: Mapped[list[\"BlogPost\"]] = relationship(back_populates=\"author\")\n    comments: Mapped[list[\"Comment\"]] = relationship(back_populates=\"author\")\nclass Comment(db.Model):\n    __tablename__ = \"comments\"",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = \"users\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)\n    password: Mapped[str] = mapped_column(String(512), nullable=False)\n    username: Mapped[str] = mapped_column(String(50), nullable=False)\n    posts: Mapped[list[\"BlogPost\"]] = relationship(back_populates=\"author\")\n    comments: Mapped[list[\"Comment\"]] = relationship(back_populates=\"author\")\nclass Comment(db.Model):\n    __tablename__ = \"comments\"",
         "detail": "main",
         "documentation": {}
     },
@@ -397,7 +396,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class Comment(db.Model):\n    __tablename__ = \"comments\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    text: Mapped[str] = mapped_column(Text, nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"))\n    author: Mapped[\"User\"] = relationship( back_populates=\"comments\")\n    post_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"blog_posts.id\"))\n    post: Mapped[\"BlogPost\"] = relationship(back_populates=\"comments\")\nwith app.app_context():\n    db.create_all()",
+        "peekOfCode": "class Comment(db.Model):\n    __tablename__ = \"comments\"\n    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)\n    text: Mapped[str] = mapped_column(Text, nullable=False)\n    author_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"users.id\"), nullable=False)\n    author: Mapped[\"User\"] = relationship( back_populates=\"comments\")\n    post_id: Mapped[int] = mapped_column(Integer, ForeignKey(\"blog_posts.id\"), nullable=False)\n    post: Mapped[\"BlogPost\"] = relationship(back_populates=\"comments\")\nwith app.app_context():\n    db.create_all()",
         "detail": "main",
         "documentation": {}
     },
@@ -406,7 +405,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if current_user.id != id:\n                return abort(403)\n            return func(*args, **kwargs)",
+        "peekOfCode": "def load_user(user_id):\n    return db.session.get(User, int(user_id))\ndef admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if not current_user.is_authenticated:\n                return abort(401)\n            if current_user.id != id:",
         "detail": "main",
         "documentation": {}
     },
@@ -415,7 +414,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if current_user.id != id:\n                return abort(403)\n            return func(*args, **kwargs)\n        return decorated_function\n    return decorator",
+        "peekOfCode": "def admin_required():\n    id = 1\n    def decorator(func):\n        @wraps(func)\n        def decorated_function(*args, **kwargs):\n            if not current_user.is_authenticated:\n                return abort(401)\n            if current_user.id != id:\n                return abort(403)\n            return func(*args, **kwargs)",
         "detail": "main",
         "documentation": {}
     },

@@ -1,3 +1,4 @@
 *pycache*
 instance
 *.pyc
+.vscode

@@ -2,3 +2,5 @@
 instance
 *.pyc
 .vscode
+.DS_Store
+.idea
